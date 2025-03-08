@@ -10,11 +10,16 @@ html {
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   background-color: #000;
   color: white;
   line-height: 27px;
+}
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 h1.mb-1 {
@@ -46,6 +51,16 @@ header nav div:first-child {
 header nav div:first-child img {
   width: 75px;
 }
+@media only screen and (max-width: 576px) {
+  header nav div:first-child img {
+    width: 90px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header nav div:last-child {
+    display: none;
+  }
+}
 header nav ul {
   list-style-type: none;
   display: flex;
@@ -76,6 +91,11 @@ main section#Home {
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 576px) {
+  main section#Home {
+    flex-direction: column;
+  }
+}
 main section#Home div:first-child p span {
   font-weight: 600;
 }
@@ -88,14 +108,30 @@ main section#Home div:last-child img {
   width: 500px;
   height: 500px;
 }
+@media only screen and (max-width: 576px) {
+  main section#Home div:last-child img {
+    width: 400px;
+    height: 400px;
+  }
+}
 main section#AboutUs {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 576px) {
+  main section#AboutUs {
+    flex-direction: column;
+  }
+}
 main section#AboutUs > div {
   flex: 1;
+}
+@media only screen and (max-width: 576px) {
+  main section#AboutUs > div {
+    width: 100%;
+  }
 }
 main section#AboutUs > div iframe {
   border-radius: 8px;
@@ -147,20 +183,40 @@ main section#Gallery .carousel__item {
   transform: translateX(50%) scale(0);
   z-index: 0;
 }
+@media only screen and (max-width: 576px) {
+  main section#Gallery .carousel__item {
+    width: 100%;
+  }
+}
 main section#Gallery .carousel__item--left {
   z-index: 1;
   visibility: visible;
   transform: translateX(0%) scale(0.9);
+}
+@media only screen and (max-width: 576px) {
+  main section#Gallery .carousel__item--left {
+    display: none;
+  }
 }
 main section#Gallery .carousel__item--main {
   z-index: 2;
   visibility: visible;
   transform: translateX(50%) scale(1);
 }
+@media only screen and (max-width: 576px) {
+  main section#Gallery .carousel__item--main {
+    transform: translateX(0%) scale(1);
+  }
+}
 main section#Gallery .carousel__item--right {
   z-index: 1;
   visibility: visible;
   transform: translateX(100%) scale(0.9);
+}
+@media only screen and (max-width: 576px) {
+  main section#Gallery .carousel__item--right {
+    display: none;
+  }
 }
 main section#Gallery .carousel__item img {
   width: 100%;
@@ -199,11 +255,23 @@ main section#Contact {
   justify-content: space-around;
   padding-bottom: 2rem !important;
 }
+@media only screen and (max-width: 576px) {
+  main section#Contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
 main section#Contact > div {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media only screen and (max-width: 576px) {
+  main section#Contact > div {
+    gap: 0.25rem;
+  }
 }
 main section#Contact > div h2 {
   text-align: center;
@@ -228,6 +296,11 @@ main section#Contact > div:first-child > div > ul {
 main section#Contact > div:first-child > div > ul i {
   font-size: 1.75rem;
   color: #fff;
+}
+@media only screen and (max-width: 576px) {
+  main section#Contact > div:first-child > div > ul i {
+    font-size: 1.5rem;
+  }
 }
 main section#Contact > div:first-child > div > ul i:hover {
   color: steelblue;
